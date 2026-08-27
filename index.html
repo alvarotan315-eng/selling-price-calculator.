@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Selling Price Calculator - Kalkulator Harga Jual</title>
+  <meta
+    name="description"
+    content="Hitung harga jual produk dengan mudah berdasarkan modal, biaya tambahan, biaya admin, dan target keuntungan."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="header">
+      <h1>Selling Price Calculator</h1>
+      <p>Hitung harga jual produk dengan mudah.</p>
+    </header>
+
+    <section class="calculator-card">
+
+      <div class="form-group">
+        <label for="productName">Nama Produk <span>(opsional)</span></label>
+        <input
+          type="text"
+          id="productName"
+          placeholder="Contoh: Kopi Susu"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="costPrice">Harga Modal / HPP</label>
+        <div class="input-wrapper">
+          <span>Rp</span>
+          <input
+            type="number"
+            id="costPrice"
+            min="0"
+            placeholder="0"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="packagingCost">Biaya Packaging</label>
+        <div class="input-wrapper">
+          <span>Rp</span>
+          <input
+            type="number"
+            id="packagingCost"
+            min="0"
+            placeholder="0"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="otherCost">Biaya Operasional Lainnya</label>
+        <div class="input-wrapper">
+          <span>Rp</span>
+          <input
+            type="number"
+            id="otherCost"
+            min="0"
+            placeholder="0"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="platformFee">Biaya Admin Marketplace</label>
+        <div class="input-wrapper">
+          <input
+            type="number"
+            id="platformFee"
+            min="0"
+            max="99"
+            step="0.1"
+            placeholder="0"
+          >
+          <span>%</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="profitTarget">Target Keuntungan</label>
+        <div class="input-wrapper">
+          <input
+            type="number"
+            id="profitTarget"
+            min="0"
+            max="99"
+            step="0.1"
+            placeholder="30"
+          >
+          <span>%</span>
+        </div>
+      </div>
+
+      <button id="calculateBtn">Hitung Harga Jual</button>
+
+      <button id="resetBtn" class="reset-button">Reset</button>
+
+    </section>
+
+    <section id="result" class="result-card hidden">
+
+      <h2>Hasil Perhitungan</h2>
+
+      <div class="recommended-price">
+        <p>Harga Jual yang Disarankan</p>
+        <strong id="sellingPrice">Rp0</strong>
+      </div>
+
+      <div class="result-row">
+        <span>Total Modal</span>
+        <strong id="totalCost">Rp0</strong>
+      </div>
+
+      <div class="result-row">
+        <span>Estimasi Biaya Admin</span>
+        <strong id="platformCost">Rp0</strong>
+      </div>
+
+      <div class="result-row">
+        <span>Estimasi Keuntungan</span>
+        <strong id="profitAmount">Rp0</strong>
+      </div>
+
+      <div class="result-row">
+        <span>Margin Keuntungan</span>
+        <strong id="profitMargin">0%</strong>
+      </div>
+
+      <div class="result-row">
+        <span>Markup dari Modal</span>
+        <strong id="markup">0%</strong>
+      </div>
+
+    </section>
+
+    <section class="info-section">
+      <h2>Bagaimana cara menghitungnya?</h2>
+      <p>
+        Selling Price Calculator menghitung harga jual berdasarkan total
+        biaya produk, biaya tambahan, biaya admin, dan target keuntungan.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2026 Selling Price Calculator</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
